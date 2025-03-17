@@ -1,6 +1,22 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 using namespace std;
+
+void solve1(){
+    int n;
+        cin >> n;
+        vector<int> a(n);
+        for(int& i : a){
+            cin >> i ;
+        }
+        for(int i = 0; i < n-1;i++){
+            if(2*min(a[i],a[i+1]) > max(a[i],a[i+1])){
+                cout<< "YES" << endl;
+                return;
+            }
+        }
+        cout<<"NO"<<endl;
+}
 int isTriangle(vector<int>& a, int n)
 {
     bool found = false;
